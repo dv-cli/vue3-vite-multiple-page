@@ -1,6 +1,11 @@
 ## 前言
 
-本项目是一个 vue3+vite+ts 的多页面（MPA）模板.
+本项目是一个 vue3+vite+ts 的多页面（MPA）模板，支持单独模块打包，支持本地开发只编译单独模块，同时，也支持多模块一起打包和本地编译。
+
+## 项目说明
+
+- 执行指令 yarn dev，需要通过`http://localhost:5238/main/`和`http://localhost:5238/minor/`才能分别访问到`main`和`minor`模块。
+- 执行指令 yarn build，打包出来文件同时包含 main 和 minor 模块，也需要通过在域名后分别加上`main`和`minor`上下文根，才能分别访问到`main`和`minor`模块。
 
 ## 技术栈
 
@@ -30,6 +35,39 @@
     yarn build:minor
 
 
+```
+
+## 目录结构
+
+```
+├── public (存放公共文件)
+│ └── favicon.ico
+├── src
+│ ├── assets (公共资源)
+│ │ ├── logo.png
+│ │ └── ...
+│ ├── components (业务组件)
+│ │ └── ...
+│ ├── modules (业务模块)
+│ │ ├── main (业务模块 1)
+│ │ │ ├── router
+│ │ │ ├── store
+│ │ │ ├── view
+│ │ │ ├── App.vue
+│ │ │ ├── index.html
+│ │ │ └── main.ts
+│ │ ├── minor (业务模块 2)
+│ │ │ ├── App.vue
+│ │ │ ├── index.html
+│ │ │ └── main.ts
+│ ├── service (公共服务)
+│ │ ├── api
+│ └─└── http.ts
+├── index.html
+├── package.json
+├── README.md
+├── tsconfig.ts
+└── vite.config.ts
 ```
 
 ## 本项目 git Commit message 统一规范

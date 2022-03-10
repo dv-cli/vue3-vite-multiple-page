@@ -32,7 +32,7 @@ export default defineConfig(({ mode }) => {
     }
   }
   return {
-    root: "./src/modules",
+    root: env.VITE_APP_ROOTPATH,
     plugins: [
       vue(),
       // gzip压缩 生产环境生成 .gz 文件
