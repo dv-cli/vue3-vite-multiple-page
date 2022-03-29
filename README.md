@@ -4,7 +4,7 @@
 
 ## 项目说明
 
-- 执行指令 yarn dev，需要通过`http://localhost:5238/main/`和`http://localhost:5238/minor/`才能分别访问到`main`和`minor`模块。
+- 执行指令 yarn dev，直接访问`http://localhost:5238`会报找不到页面，这是因为在`.env`文件中把`VITE_APP_ROOTPATH`设置为了`./src/modules/`，所以需要通过`http://localhost:5238/main/`和`http://localhost:5238/minor/`才能分别访问到`main`和`minor`模块。当然，如果你觉得这样不友好，你可以自行`VITE_APP_ROOTPATH`的值为`./`，这就可以通过访问目录结构第一层的`index.html`跳转到其他模块中。
 - 执行指令 yarn build，打包出来文件同时包含 main 和 minor 模块，也需要通过在域名后分别加上`main`和`minor`上下文根，才能分别访问到`main`和`minor`模块。
 
 ## 技术栈
