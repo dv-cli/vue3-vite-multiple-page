@@ -43,7 +43,7 @@
 
   ```
 
-  你可以按下面这样修改，修改完成后，直接访问`http://localhost:5238/`会报错`not fund page`，需要拼接 URL 通过`http://localhost:5238/main/`、`http://localhost:5238/minor/`来分别访问 main 和 minor
+  你可以按下面这样修改，修改完成后，直接访问`http://localhost:5238/`会报错`not find page`，需要拼接 URL 通过`http://localhost:5238/main/`、`http://localhost:5238/minor/`来分别访问 main 和 minor
 
   ```javascript
   /** 以下是修改后 三个 文件 配置。*/
