@@ -8,6 +8,9 @@
 
 [cdv-cli 脚手架使用方法点击查看](https://github.com/ruanlin-kylin/cdv-cli)
 
+![image](https://user-images.githubusercontent.com/29174640/168724470-e2a2df4e-ef9c-4582-87b8-e5e79f117fec.png)
+
+
 ## 技术栈
 
 - vue3.2+Ts+Vite
