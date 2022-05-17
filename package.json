@@ -2,7 +2,7 @@
   "name": "pc-temp-v3-vite",
   "version": "0.0.1",
   "author": "ruanlin",
-  "description": "一个Vue3.2+ts+vite的开发模板",
+  "description": "一个Vue3.2+ts+vite的多页开发模板",
   "license": "ISC",
   "scripts": {
     "dev": "vite --host",

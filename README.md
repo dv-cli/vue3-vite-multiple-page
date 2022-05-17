@@ -2,6 +2,20 @@
 
 本项目是一个 vue3+vite+ts 的多页面（MPA）模板，支持单独模块打包，支持本地开发只编译单独模块，同时，也支持多模块一起打包和本地编译。
 
+## 脚手架安装
+
+本项目目前已经和另一个[单页模板项目](https://github.com/ruanlin-kylin/vue3-ts-vite)一起，支持通过`cdv-cli`脚手架来安装。
+
+[cdv-cli 脚手架使用方法点击查看](https://github.com/ruanlin-kylin/cdv-cli)
+
+## 技术栈
+
+- vue3.2+Ts+Vite
+- [axios（ajax 请求）](https://www.kancloud.cn/yunye/axios/234845)
+- [naive-ui(UI 组件库)](https://www.naiveui.com/zh-CN/dark/docs/introduction) 尤雨溪官方推荐
+- [vueuse(强大的函数库)](https://vueuse.org/) 尤雨溪官方推荐
+- [pinia(状态管理工具，比 vuex 更丝滑)](https://pinia.vuejs.org/) 尤雨溪官方推荐
+
 ## 项目说明
 
 - 执行指令 yarn dev，通过`http://localhost:5238/`访问到最外层的 index.html 文件，然后通过该页面可以进入到 main 模块 和 minor 模块。
@@ -48,13 +62,6 @@
   因为本项目模板的 minor 模块没有配置 router，所以没有举例。如果要配 minor 模块的 router，思路按以上说明即可。
 
 - 执行指令 yarn build，打包出来文件同时包含 main 和 minor 模块，也需要通过在域名后分别加上`main`和`minor`上下文根，才能分别访问到`main`和`minor`模块。如果部署在同个服务器 nginx，也可以分别通过 main 和 minor 去代理。
-
-## 技术栈
-
-- vue3.2+Ts+Vite
-- [axios（ajax 请求）](https://www.kancloud.cn/yunye/axios/234845)
-- [naive-ui(UI 组件库)](https://www.naiveui.com/zh-CN/dark/docs/introduction) 尤大推荐
-- [vueuse(强大的函数库)](https://vueuse.org/) 尤大推荐
 
 ## 开发运行
 
