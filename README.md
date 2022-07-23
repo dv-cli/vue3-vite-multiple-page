@@ -4,17 +4,19 @@
 
 ## 脚手架安装
 
-本项目目前已经和另一个[单页模板项目](https://github.com/ruanlin-kylin/vue3-ts-vite)一起，支持通过`cdv-cli`脚手架来安装。
+本项目支持通过`cdv-cli`脚手架来安装，脚手架目前提供 vue3 单页开发模板，vue3 多页开发模板，vue3 移动端 H5 开发模板。
 
 [cdv-cli 脚手架使用方法点击查看](https://github.com/ruanlin-kylin/cdv-cli)
 
+![image](./src/assets/cdv1.png)
+
 ## 技术栈
 
-- vue3.2+Ts+Vite
-- [axios（ajax 请求）](https://www.kancloud.cn/yunye/axios/234845)
-- [naive-ui(UI 组件库)](https://www.naiveui.com/zh-CN/dark/docs/introduction) 尤雨溪官方推荐
-- [vueuse(强大的函数库)](https://vueuse.org/) 尤雨溪官方推荐
-- [pinia(状态管理工具，比 vuex 更丝滑)](https://pinia.vuejs.org/) 尤雨溪官方推荐
+- [vite](https://cn.vitejs.dev/) 尤大团队开发的新一代构建工具，急速启动，快速热载
+- [axios](https://www.kancloud.cn/yunye/axios/234845) 这个就不用介绍了吧，使用最广泛的 ajax 封装插件
+- [naive-ui](https://www.naiveui.com/zh-CN/dark/docs/introduction) 尤雨溪推荐 UI 库，TypeScript 语法，主题可调，为 vue3 而生
+- [vueuse](https://vueuse.org/) 尤雨溪推荐，可以理解为 vue3 的 hooks 库，专为 vues 设计
+- [pinia](https://pinia.vuejs.org/) 尤雨溪推荐，替代 vuex4，作者原话 pinia 就是 vuex5 了
 
 ## 项目说明
 
@@ -134,9 +136,6 @@
 - test: 测试相关
 - docs: 文档/注释
 - chore: 依赖更新/脚手架配置修改等
-- workflow: 工作流改进
 - ci: 持续集成
-- types: 类型定义文件更改
-- wip: 开发中
 
 **[⬆ 返回顶部](#技术栈)**
