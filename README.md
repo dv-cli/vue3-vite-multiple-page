@@ -42,7 +42,7 @@
 
   ```
 
-  你可以按下面这样修改，修改完成后，直接访问`http://localhost:5238/`会报错`not fund page`，需要拼接 URL 通过`http://localhost:5238/main/`、`http://localhost:5238/minor/`来分别访问 main 和 minor
+  你可以按下面这样修改，修改完成后，直接访问`http://localhost:5238/`会报错`not find page`，需要拼接 URL 通过`http://localhost:5238/main/`、`http://localhost:5238/minor/`来分别访问 main 和 minor
 
   ```javascript
   /** 以下是修改后 三个 文件 配置。*/
@@ -138,4 +138,8 @@
 - chore: 依赖更新/脚手架配置修改等
 - ci: 持续集成
 
-**[⬆ 返回顶部](#技术栈)**
+## 结尾
+
+本项目可以免费使用，如果本项目对您有帮助的话，麻烦给个 star 鼓励下~
+
+**[⬆ 返回顶部](#前言)**
