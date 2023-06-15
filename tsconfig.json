@@ -11,7 +11,9 @@
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@main/*": ["src/modules/main/*"],
+      "@minor/*": ["src/modules/minor/*"]
     },
     "types": ["naive-ui/volar"]
   },

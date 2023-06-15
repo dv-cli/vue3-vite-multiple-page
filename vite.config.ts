@@ -4,6 +4,7 @@ import { resolve, join } from "path";
 import { readdirSync } from "fs";
 
 import viteCompression from "vite-plugin-compression";
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 
 const project_pages = {};
 const entryPath = resolve(__dirname, "./src/modules");
@@ -35,6 +36,15 @@ export default defineConfig(({ mode }) => {
     root: env.VITE_APP_ROOTPATH,
     plugins: [
       vue(),
+      createSvgIconsPlugin({
+        // 指定需要缓存的图标文件夹
+        iconDirs: [
+          resolve(process.cwd(), "src/assets/icons"),
+          resolve(process.cwd(), "src/modules/main/assets/icons"),
+        ],
+        // 指定symbolId格式
+        symbolId: "icon-[dir]-[name]",
+      }),
       // gzip压缩 生产环境生成 .gz 文件
       viteCompression({
         verbose: true,
@@ -48,8 +58,8 @@ export default defineConfig(({ mode }) => {
       extensions: [".js", ".ts", ".vue", ".json"],
       alias: {
         "@": resolve(__dirname, "src"),
-        main: resolve(__dirname, "src/modules/main"),
-        minor: resolve(__dirname, "src/modules/minor"),
+        "@main": resolve(__dirname, "src/modules/main"),
+        "@minor": resolve(__dirname, "src/modules/minor"),
       },
     },
     css: {
@@ -64,7 +74,13 @@ export default defineConfig(({ mode }) => {
       port: 5238,
       open: false,
       https: false,
-      proxy: {},
+      proxy: {
+        "/cnhis": {
+          target: "https://mock.mengxuegu.com/mock/63856c7c9433403d6c06899c", // easymock
+          changeOrigin: true,
+          rewrite: path => path.replace(/^\/cnhis/, ""),
+        },
+      },
     },
     build: {
       rollupOptions: {

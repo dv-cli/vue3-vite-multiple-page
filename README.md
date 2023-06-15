@@ -15,7 +15,7 @@
 - [vite](https://cn.vitejs.dev/) 尤大团队开发的新一代构建工具，急速启动，快速热载
 - [axios](https://www.kancloud.cn/yunye/axios/234845) 这个就不用介绍了吧，使用最广泛的 ajax 封装插件
 - [naive-ui](https://www.naiveui.com/zh-CN/dark/docs/introduction) 尤雨溪推荐 UI 库，TypeScript 语法，主题可调，为 vue3 而生
-- [vueuse](https://vueuse.org/) 尤雨溪推荐，可以理解为 vue3 的 hooks 库，专为 vues 设计
+- [vueuse](https://vueuse.org/) 尤雨溪推荐，可以理解为 vue3 的 hooks 库，专为 vue 设计
 - [pinia](https://pinia.vuejs.org/) 尤雨溪推荐，替代 vuex4，作者原话 pinia 就是 vuex5 了
 
 ## 项目说明
@@ -48,45 +48,46 @@
   /** 以下是修改后 三个 文件 配置。*/
   // vite.config.ts
   export default defineConfig({
-      root: env.VITE_APP_ROOTPATH,   // VITE_APP_ROOTPATH  在.env 文件中设置
-  })
-
-  // .env
-  VITE_APP_ROOTPATH = ./src/modules/
-
-  //main模块 router/index.ts
-  const router = createRouter({
-      history: createWebHistory('main')
+    root: env.VITE_APP_ROOTPATH, // VITE_APP_ROOTPATH  在.env 文件中设置
   });
-
   ```
 
-  因为本项目模板的 minor 模块没有配置 router，所以没有举例。如果要配 minor 模块的 router，思路按以上说明即可。
+// .env
+VITE_APP_ROOTPATH = ./src/modules/
+
+//main 模块 router/index.ts
+const router = createRouter({
+history: createWebHistory('main')
+});
+
+````
+
+因为本项目模板的 minor 模块没有配置 router，所以没有举例。如果要配 minor 模块的 router，思路按以上说明即可。
 
 - 执行指令 yarn build，打包出来文件同时包含 main 和 minor 模块，也需要通过在域名后分别加上`main`和`minor`上下文根，才能分别访问到`main`和`minor`模块。如果部署在同个服务器 nginx，也可以分别通过 main 和 minor 去代理。
 
 ## 开发运行
 
 ```bash
-    # 安装依赖
-    yarn install
+  # 安装依赖
+  yarn install
 
-    # 本地开发 开启所有模块服务
-    yarn dev
+  # 本地开发 开启所有模块服务
+  yarn dev
 
-    # 本地开发 开启单个模块
-    yarn main
-    yarn minor
+  # 本地开发 开启单个模块
+  yarn main
+  yarn minor
 
-    # 所有模块一起打包
-    yarn build
+  # 所有模块一起打包
+  yarn build
 
-    # 单独模块打包
-    yarn build:main
-    yarn build:minor
+  # 单独模块打包
+  yarn build:main
+  yarn build:minor
 
 
-```
+````
 
 ## 目录结构
 
