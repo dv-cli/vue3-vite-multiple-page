@@ -49,18 +49,16 @@
   // vite.config.ts
   export default defineConfig({
     root: env.VITE_APP_ROOTPATH, // VITE_APP_ROOTPATH  在.env 文件中设置
+  })
+
+  // .env
+  VITE_APP_ROOTPATH = ./src/modules/
+
+  //main 模块 router/index.ts
+  const router = createRouter({
+    history: createWebHistory('main')
   });
   ```
-
-// .env
-VITE_APP_ROOTPATH = ./src/modules/
-
-//main 模块 router/index.ts
-const router = createRouter({
-history: createWebHistory('main')
-});
-
-````
 
 因为本项目模板的 minor 模块没有配置 router，所以没有举例。如果要配 minor 模块的 router，思路按以上说明即可。
 
@@ -69,25 +67,25 @@ history: createWebHistory('main')
 ## 开发运行
 
 ```bash
-  # 安装依赖
-  yarn install
+ # 安装依赖
+ yarn install
 
-  # 本地开发 开启所有模块服务
-  yarn dev
+ # 本地开发 开启所有模块服务
+ yarn dev
 
-  # 本地开发 开启单个模块
-  yarn main
-  yarn minor
+ # 本地开发 开启单个模块
+ yarn main
+ yarn minor
 
-  # 所有模块一起打包
-  yarn build
+ # 所有模块一起打包
+ yarn build
 
-  # 单独模块打包
-  yarn build:main
-  yarn build:minor
+ # 单独模块打包
+ yarn build:main
+ yarn build:minor
 
 
-````
+```
 
 ## 目录结构
 
