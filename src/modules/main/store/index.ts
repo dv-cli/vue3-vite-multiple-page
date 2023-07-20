@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
 import { getMenuListApi } from "@/service/api/mock";
+import { MenuResult } from "@/service/api/mock-data";
 import { ObjectType } from "@/service/api/interface";
 import { getKeepAliveRouterName, getAllBreadcrumbList } from "@/modules/main/utils/nav";
 
@@ -29,9 +30,15 @@ export const useGlobalStore = defineStore({
     breadcrumbObjectGet: state => getAllBreadcrumbList(state.menuList),
   },
   actions: {
-    async getMenuList() {
-      const { data } = await getMenuListApi();
-      this.menuList = data as any;
+    getMenuList() {
+      getMenuListApi().then(
+        ({ data }) => {
+          this.menuList = data as any;
+        },
+        error => {
+          this.menuList = MenuResult.data;
+        }
+      );
     },
     toggleThem(themeValue: string) {
       this.themeValue = themeValue;

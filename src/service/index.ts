@@ -65,7 +65,7 @@ class RequestHttp {
         // * 成功请求（在页面上除非特殊情况，否则不用处理失败逻辑）
         return data;
       },
-      async (error: AxiosError) => {
+      (error: AxiosError) => {
         const { response } = error;
         // 请求超时单独判断，因为请求超时没有 response
         if (error.message.indexOf("timeout") !== -1) message.error("请求超时！请您稍后重试");

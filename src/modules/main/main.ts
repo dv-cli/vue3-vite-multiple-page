@@ -7,7 +7,6 @@ import "virtual:svg-icons-register";
 import router from "./router/index";
 import { createPinia } from "pinia";
 
-debugger;
 const app = createApp(App);
 
 app.use(router);
