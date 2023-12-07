@@ -4,7 +4,12 @@
 
 ## 脚手架安装
 
-本项目支持通过`cdv-cli`脚手架来安装，脚手架目前提供 vue3 单页开发模板，vue3 多页开发模板，vue3 移动端 H5 开发模板。
+本项目支持通过`cdv-cli`脚手架来安装，脚手架目前提供:
+
+- vue3 单页开发模板
+- vue3 多页开发模板
+- vue3 移动端 H5 开发模板
+- vue3 + taro3 移动多端开发模板
 
 [cdv-cli 脚手架使用方法点击查看](https://github.com/ruanlin-kylin/cdv-cli)
 
