@@ -1,9 +1,10 @@
 {
-  "name": "pc-temp-v3-vite",
+  "name": "vue3-vite-multiple-page",
   "version": "0.0.1",
   "author": "ruanlin",
   "description": "一个Vue3.2+ts+vite的多页开发模板",
   "license": "ISC",
+  "repository": "https://github.com/dv-cli/vue3-vite-multiple-page",
   "scripts": {
     "dev": "vite --host",
     "main": "vite serve src/modules/main/ --config ./vite.config.ts",
